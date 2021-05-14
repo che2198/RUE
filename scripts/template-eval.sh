@@ -1,0 +1,17 @@
+python eval.py \
+    --arch resnet18 \
+    --dataset cifar10 \
+    --train-steps 40000 \
+    --batch-size 128 \
+    --optim sgd \
+    --lr 0.1 \
+    --lr-decay-rate 0.1 \
+    --lr-decay-freq 15000 \
+    --weight-decay 5e-4 \
+    --momentum 0.9 \
+    --pgd-radius 0 \
+    --pgd-steps 0 \
+    --pgd-step-size 0 \
+    --pgd-random-start \
+    --pgd-norm-type l-infty \
+    --resume-path ./exp_data/cifar10/perturb/perturb-fin-model.pkl

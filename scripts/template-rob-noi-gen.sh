@@ -1,0 +1,12 @@
+python robust_noise_generation_v22.py \
+    --arch resnet18 \
+    --dataset cifar10 \
+    --batch-size 128 \
+    --defender pgd-v1 \
+    --pgd-radius 8 \
+    --pgd-steps 8 \
+    --pgd-step-size 2 \
+    --pgd-random-start \
+    --resume-path ./exp_data/cifar10/perturb/perturb-fin-model.pkl \
+    --save-dir ./exp_data/cifar10/rob-noi-gen \
+    --save-name rob-noi-gen

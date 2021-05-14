@@ -1,0 +1,14 @@
+python pretrained_perturbation.py \
+    --arch resnet18 \
+    --dataset cifar10 \
+    --type pgd \
+    --train-steps 40000 \
+    --batch-size 128 \
+    --pgd-radius 8 \
+    --pgd-steps 8 \
+    --pgd-step-size 2 \
+    --pgd-random-start \
+    --pgd-norm-type l-infty \
+    --resume-path ./exp_data/cifar10/perturb/perturb-fin-model.pkl \
+    --save-dir ./exp_data/cifar10/pre-perb \
+    --save-name per-preb
